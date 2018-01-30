@@ -35,7 +35,9 @@ client.on('connected', function () {
                     var participants = '';
                     conversation.conversation.participant_data.forEach(
                         function (participant) {
-                            participants += participant.fallback_name + ', ';
+                            if (participant.fallback_name) {
+                                participants += participant.fallback_name + ', ';
+                            }
                         }
                     )
                     document.getElementById('convList').insertAdjacentHTML('beforeend', '<li>' + participants + '</li>');

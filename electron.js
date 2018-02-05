@@ -20,7 +20,7 @@ function getCookies(error, cookies) {
 
 function getOauthCode() {
     if (mainWindow.getURL().indexOf('/o/oauth2/programmatic_auth') > 0) {
-        electron.session.defaultSession.cookies.get({url: 'https://talkgadget.google.com'}, getCookies);
+        electron.session.defaultSession.cookies.get({}, getCookies);
     }
 }
 

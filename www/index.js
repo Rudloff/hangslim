@@ -22,7 +22,7 @@ var creds = function() {
 var client = new Client(
     {
         jarstore: store,
-        rtokenpath: 'foo.txt'
+        rtokenpath: 'token.txt'
     }
 );
 
